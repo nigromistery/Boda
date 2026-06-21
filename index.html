@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="indexG.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <title>BODA</title>
+  </head>
+  <body>
+<div class="principal">
+<div class="p3">
+  <h2>Nuestra Boda</h2>
+</div>
+<div class="p1" id="secundario">
+<div class="p2" id="pri">
+<div id="presentacion">
+  <h3> Jonathan Uriel Albor Salazar  <br> &  <br> Guadalupe Vergara Segundo</h3>
+</div>
+<div id="foto">
+<img src="foto.png" alt="">
+</div>
+</div>
+<div class="p2" id="fe">
+  <div id="fecha">
+    <h3>Presentación</h3>
+    <h5>Hola familia, amigos y compañía, les mandamos un cordial saludo, esperando que tengan salud y una maravillosa vida llena de fortuna.
+      <br><br>   Sería un gran honor para nosotros el festejar  este suceso tan importante en compañía de ustedes. 
+      <br><br> Por consiguiente, queremos hacerles llegar nuestra cordial invitación a nuestro evento.
+    <br><br> El día sábado:</h5>
+    <h2>17 de Octubre de 2026</h2>
+    <h5>El horario de la misa será a las 05:45 PM  <br> Ubicación:</h5>
+    <a href="https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+de+la+Luz/@19.5314398,-99.0539991,19z/data=!4m6!3m5!1s0x85d1fa81d40ba8cb:0xee67f8b534c6497f!8m2!3d19.531315!4d-99.0540454!16s%2Fg%2F1q5d60dp_!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D">Iglesia</a>
+    <h5>El horario del festejo será a las 08:00 PM <br>Ubicación:</h5>
+    <a href="https://www.google.com/maps/place/Salones+Bersach/@19.5202282,-99.0419606,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1fa9098d1ba27:0x9d55384209820ce5!8m2!3d19.5202282!4d-99.0419606!16s%2Fg%2F1thxldm7!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D">Salón</a>
+  <br>
+  </div>
+  
+</div>
+</div>
+
+<br>
+<audio id="musica-fondo" src="ETM.mp3" loop></audio>
+
+<script>
+  window.onload = function() {
+    const music = document.getElementById('musica-fondo');
+    
+    // Espera 1000 milisegundos (1 segundo) antes de intentar reproducir
+    setTimeout(() => {
+      music.play().catch(error => {
+        console.log("Reproducción automática bloqueada por el navegador. Esperando interacción...");
+        
+        // RESPALDO: Si el navegador lo bloquea, se activa inmediatamente al primer toque del usuario
+        document.addEventListener('click', () => {
+          music.play();
+        }, { once: true });
+      });
+    }, 200); // 1000ms = 1 segundo
+  };
+</script>
+</div>
+  </body>
+</html>
